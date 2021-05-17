@@ -7,6 +7,7 @@ const discription = document.getElementById("description");
 const locationElement = document.getElementById("location1");
 const notification = document.querySelector(".notification");
 const pressure = document.querySelector(".pressure p");
+let footer = document.getElementById("footer");
 
 window.addEventListener("load", function location() {
     if (navigator.geolocation) {
@@ -55,4 +56,5 @@ function error() {
     alert("Please turn on your location");
     notification.style.display = "block";
     notification.innerHTML = `<p> ${message} </p>`;
+    footer.style.margin = "-30px 0px";
 }
